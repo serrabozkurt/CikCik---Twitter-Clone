@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Blog</title>
+</head>
+<body>
+    <a href="/ekle/">Yazı ekle</a>
+    {% for gonderi in gonderiler %}
+    <h2>{{ gonderi.title }}</h2>
+    {{ gonderi.content|linebreaks }}
+    {% endfor %}
+</body>
+</html>
