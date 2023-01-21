@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formlar</title>
+</head>
+<body>
+    <input name="cicek">
+    <form method="post">
+        <input>
+        <input name="isim" placeholder="adınızı yazın" autocomplete="off">
+        <input name="ugurlu_sayi" type="number" step="10" placeholder="buraya sadece sayı yazılır">
+        <input name="parola" type="password" placeholder="parolanızı girin">
+
+        <input type="email" required>
+        <input type="search" autofocus>
+
+        <input type="date">
+        <input type="time" disabled>
+
+        <input type="file">
+
+        <input type="color" name="renk">
+
+        <!-- required özelliği ile zorunlu hâle getirilebilir -->
+        <p>
+            <input type="checkbox" name="sozlesme" id="agreement">
+            <label for="agreement">Okudum ve kabul ediyorum.</label>
+        </p>
+
+        <input type="radio" name="sigara" value="evet">
+        <input type="radio" name="sigara" value="hayır">
+        <input type="radio">
+
+        <textarea name="adres"></textarea>
+
+        <select name="il">
+            <option>İstanbul</option>
+            <option>Ankara</option>
+            <option value="35">İzmir</option>
+        </select>
+
+        <label for="lastname">Soyad:</label>
+        <input name="soyisim" id="lastname">
+
+        <input type="submit">
+    </form>
+
+    <form action="https://google.com/search">
+        <input type="search" name="q">
+        <input type="submit">
+    </form>
+</body>
+</html>
