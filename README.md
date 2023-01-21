@@ -1,7 +1,7 @@
-# CikCik---Twitter-Clone
-This repository includes step-by-step learning material about Python, Django Framework, HTML5/CSS3 & a final project created using all of these information.
+# CikCik: Twitter-Clone Web App
+This repository includes step-by-step learning material about <b> Python, Django Framework, HTML5/CSS3 </b> & a final project created using all of these information.
 
-#### You can find the final version of the project source code [here](https://github.com/serrabozkurt/CikCik---Twitter-Clone-Web-App/tree/main/Step%2024%20-%20Project%20v4%20and%20final%20-%20CikCik).
+#### You can find the final version source code of the project [here](https://github.com/serrabozkurt/CikCik---Twitter-Clone-Web-App/tree/main/Step%2024%20-%20Project%20v4%20and%20final%20-%20CikCik).
 
 The covered topics in this repository:
 
