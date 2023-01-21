@@ -1,0 +1,23 @@
+{% extends 'giris_yapan_kullanici.html' %}
+
+{% block icerik %}
+    <div class="starter-template">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-primary" type="submit">
+        </form>
+    </div>
+    <div class="container">
+        {% for tweet in timeline %}
+            <div>
+                <div><a href="{% url 'profil' tweet.author.username %}">{{ tweet.author.username }}</a></div>
+                <div>{{ tweet.text }}</div>
+                {% if tweet.image %}
+                    <div><img class="img-fluid" src="/uploads/{{ tweet.image }}"></div>
+                {% endif %}
+                <div>{{ tweet.created }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
