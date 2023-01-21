@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/hesap/?selam=onur" method="post">
+        {% csrf_token %}
+        <input name="sayi1" type="number" required>
+        <input name="sayi2" type="number" required>
+        <input type="submit">
+    </form>
+</body>
+</html>
