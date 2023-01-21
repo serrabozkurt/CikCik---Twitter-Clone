@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@{{ profile.username }}</title>
+</head>
+<body>
+    <h2>@{{ profile.username }}</h2>
+    {% if profile.username != user.username %}
+    <a href="{% url 'takip' profile.username %}">{% if follows %}Takibi bırak{% else %}Takip et{% endif %}</a>
+    {% endif %}
+    {% for tweet in profile.tweet_set.all %}
+    <div>
+        <p>{{ tweet.author.username }}</p>
+        <p>{{ tweet.text }}</p>
+        {% if tweet.image %}
+        <p><img src="{{ tweet.image.url }}"></p>
+        {% endif %}
+        <small>{{ tweet.created|timesince }}</small>
+    </div>
+    {% endfor %}
+</body>
+</html>

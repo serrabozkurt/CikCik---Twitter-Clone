@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cik Cik</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+
+    {% for tweet in timeline %}
+    <div>
+        <p>{{ tweet.author.username }}</p>
+        <p>{{ tweet.text }}</p>
+        {% if tweet.image %}
+        <p><img src="{{ tweet.image.url }}"></p>
+        {% endif %}
+        <small>{{ tweet.created|timesince }}</small>
+    </div>
+    {% endfor %}
+</body>
+</html>
