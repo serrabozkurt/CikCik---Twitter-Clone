@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <a href="{% url 'yazi-ekle' %}">Yeni Yazı</a> -
+    <a href="/?durum=taslak">Taslaklar</a> -
+    <a href="/?durum=tumu">Tümü</a>
+    {% for gonderi in gonderiler %}
+    <h2>{{ gonderi.title }}</h2>
+    {{ gonderi.content|linebreaks }}
+    <p>{{ gonderi.created|timesince }}</p>
+    {% endfor %}
+</body>
+</html>
