@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Yap</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <select>
+            {% for sehir in iller %}
+            <option>{{ sehir.il }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+</body>
+</html>

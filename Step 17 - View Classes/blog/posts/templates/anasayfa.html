@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <p>{{ user }}</p>
+    <a href="/ekle">Yeni Yazı</a>
+    <a href="/cikis/">Çıkış</a>
+    {% else %}
+    <a href="/giris/">Giriş</a>
+    {% endif %}
+</body>
+</html>
