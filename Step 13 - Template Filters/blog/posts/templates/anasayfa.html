@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    {% for gonderi in gonderiler %}
+        <h2>{{ gonderi.title|title }}</h2>
+        {{ gonderi.content|linebreaks }}
+        <p>{{ gonderi.created|timesince }}</p>
+    {% endfor %}
+    <p>Toplam: {{ gonderiler|length }} yazı</p>
+    <p>{{ "444-YZLM"|phone2numeric }}</p>
+</body>
+</html>
